@@ -49,7 +49,7 @@ class field(self,ships):
         return bool_field
 
     bool_field = shoot_at(tuple)
-    
+
     def field_without_ships(bool_field):
         for i in range(len(bool_field)):
             if bool_field[i] == 'x' or bool_field[i] == 'X':
@@ -57,13 +57,24 @@ class field(self,ships):
         return shooting_coordinates
 
     def field_with_ships():
+        for i in range(len(bool_field)):
+            if bool_field[i] == 'x' or bool_field[i] == 'X':
+                pinged_coordinates.append((i//10+1,i%10))
+            if bool_field[i] == 'True':
+                pinged_coordinates.append((i // 10 + 1, i % 10))
 
 class player(self,name):
     self.name = name
+    list_of_players = []
 
     def __init__(name):
+        list_of_players.append(name)
 
-    def read_position():
+    def read_position(tuple):
+        letters = [a,b,c,d,e,f,g,h,i,j]
+        for i in range(len(letters)):
+            if tuple[1] == letters[i]:
+                return (tuple[0],i)
 
 class game(self,field,players,current_player):
     self.field = filed
@@ -71,7 +82,7 @@ class game(self,field,players,current_player):
     self.current_player = current_player
 
     def __init__():
-
+        
     def read_position():
 
     def field_without_ships(index):
